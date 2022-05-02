@@ -193,8 +193,9 @@ for epoch in range(start_epoch, opt.niter + opt.niter_decay + 1):
 
 
             n=str(step)+'.jpg'
-            cv2.imwrite('results/Beforee/'+data['name'][0],bgr2)
+            cv2.imwrite('results/Before/'+data['name'][0],bgr2)
             cv2.imwrite('results/After/'+data['name'][0],bgr)
+            # cv2.imwrite('results/'+data['name'][0],bgr)
 
             # cv2.imwrite('results/test/try-on/'+data['name'][0],image_bgr)
         step += 1
