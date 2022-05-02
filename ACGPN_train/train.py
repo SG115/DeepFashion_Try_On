@@ -212,7 +212,8 @@ for epoch in range(start_epoch, opt.niter + opt.niter_decay + 1):
             model.module.save('latest')
             np.savetxt(iter_path, (epoch, epoch_iter), delimiter=',', fmt='%d')
 
-        if epoch_iter >= dataset_size:
+        # replace 200 with dataset_size
+        if epoch_iter >= 200:
             break
        
     # end of epoch 
